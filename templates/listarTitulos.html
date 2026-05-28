@@ -4,47 +4,10 @@
 {% load static %}
 
 {% block title %}
-<!DOCTYPE html>
-<html lang="pt-br">
+    <title>Teste Títulos</title>
+{% endblock %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
-    <!-- define e insere um favicon no documento HTML -->
-    <link href="./img/python.ico" rel="shortcut icon">
-
-    <title>Django - Exercícios</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
-        integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
-
-    <!-- <script src="js/aula17.js" defer></script> -->
-    <link href="../css/meu-estilo.css" rel="stylesheet">
-
-</head>
-
-<body>
-
-    <!-- seu codigo comeca aqui -->
-
-    <header class="container px-0">
-
-        <nav class="navbar navbar-expand-lg navbar-light bg-light px-0">
-
-            <!-- logo -->
-            <div>
-                <a class="navbar-brand mx-auto">
-                    <img src="../img/python_64.png">
-                </a>
-            </div>
-
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mynavbar"
-                aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Navegação Alternativa">
-                Menu <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <!-- menu -->
+{% block menu %}            <!-- menu -->
             <div class="collapse navbar-collapse justify-content-end" id="mynavbar">
                 <div class="navbar-nav">
                     <a href="../escola.html" class="nav-link">Início</a>
@@ -52,28 +15,19 @@
                     <a href="listarTitulos.html" class="nav-link">Listar</a>
                 </div>
             </div>
-        </nav>
-
-        <!--
-        <div class="row">
-            <div class="col">
-                <div class="alert alert-success alert-dismissible" role="alert">
-                    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-                </div>
-            </div>
-        </div>
-    -->
-
-    </header>
-
-    <main class="container m-2 mx-auto my-font-family">
-
-        <div class="row">
+{% endblock %}   
+      
+        {% block titulo_pagina %}
+               
+            <div class="row">
             <div class="col text-center m-0">
                 <h2 class="mt-2 mb-5 my-h2">Lista de Títulos</h2>
             </div>
         </div>
+        {% endblock %}
+    
 
+        {% block corpo %}
         <!-- tabela responsiva -->
         <div class="table-responsive">
 
@@ -117,5 +71,5 @@
         </div>
 
     </main>
-
+ {% block corpo %}
     
